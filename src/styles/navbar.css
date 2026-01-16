@@ -1,0 +1,103 @@
+/* Floating Navbar Container */
+.floating-navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 10px 22px;
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode navbar */
+.dark .floating-navbar {
+  background: rgba(31, 31, 31, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar Links */
+.nav-link {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 25px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode links */
+.dark .nav-link {
+  color: #fff;
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.dark .nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Active Link */
+.active {
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dark .active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.dark .theme-toggle {
+  color: #fff;
+}
+
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dark .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .floating-navbar {
+    gap: 10px;
+    padding: 8px 14px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .theme-toggle {
+    font-size: 16px;
+  }
+}
